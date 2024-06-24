@@ -5,6 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MyStoryland</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'YOUR_TRACKING_ID');
+  </script>
 </head>
 <body>
   <!-- Header Section -->
@@ -34,30 +44,32 @@
   <div class="features">
     <h2>Why Choose Us?</h2>
     <div class="feature">
-      <img src="https://example.com/adventure.svg" alt="Adventure">
+      <img src="https://example.com/adventure-icon.png" alt="Adventure">
       <h3>Personalized Adventures</h3>
-      <p>Every story is unique to your child.</p>
+      <p>Unique stories for your child.</p>
     </div>
     <div class="feature">
-      <img src="https://example.com/education.svg" alt="Educational">
+      <img src="https://example.com/education-icon.png" alt="Educational">
       <h3>Educational Fun</h3>
-      <p>Stories that entertain and educate.</p>
+      <p>Entertain and educate.</p>
     </div>
     <div class="feature">
-      <img src="https://example.com/bonding.svg" alt="Bonding">
+      <img src="https://example.com/bonding-icon.png" alt="Bonding">
       <h3>Family Bonding</h3>
-      <p>Quality time spent together.</p>
+      <p>Quality time together.</p>
     </div>
   </div>
 
   <!-- Testimonials Section -->
   <div class="testimonials">
     <h2>What Parents Say</h2>
-    <div class="testimonial">
-      <p>"My kids love their bedtime stories from MyStoryland!" - Sarah, mom of two</p>
-    </div>
-    <div class="testimonial">
-      <p>"A wonderful way to personalize our nightly routine." - Jane, mother of three</p>
+    <div class="testimonial-slider">
+      <div>
+        <p>"My kids love their bedtime stories from MyStoryland!" - Sarah, mom of two</p>
+      </div>
+      <div>
+        <p>"A wonderful way to personalize our nightly routine." - Jane, mother of three</p>
+      </div>
     </div>
   </div>
 
@@ -67,6 +79,15 @@
     <a href="https://facebook.com">Facebook</a> | <a href="https://instagram.com">Instagram</a> | <a href="https://twitter.com">Twitter</a>
     <p>© 2024 MyStoryland. All rights reserved.</p>
   </footer>
+
+  <script>
+    $(document).ready(function(){
+      $('.testimonial-slider').slick({
+        autoplay: true,
+        dots: true
+      });
+    });
+  </script>
 </body>
 </html>
 
